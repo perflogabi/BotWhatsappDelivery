@@ -12,15 +12,15 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.body.toLocaleLowerCase() === 'oi') {
+    if (message.body.toLocaleLowerCase() === 'Boa noite') {
         client.sendMessage(message.from, 'Olá, Bem-vindo(a) ao DeliveryEats!');
-        client.sendMessage(message.from, 'Deseja fazer um pedido?');
+        client.sendMessage(message.from, 'Gostaria fazer um pedido?');
         client.sendMessage(message.from, '1. Sim');
         client.sendMessage(message.from, '2. Não');   
     }
 
     if (message.body.toLocaleLowerCase() === '1') {
-        client.sendMessage(message.from, 'Entre no nosso Cardápio e realize o seu pedido: ' + siteDoDelivery);  
+        client.sendMessage(message.from, 'Entre no nosso Cardápio e faça o seu pedido:\n\n ' + siteDoDelivery);  
     }
 
     if (message.body.toLocaleLowerCase() === '2') {
